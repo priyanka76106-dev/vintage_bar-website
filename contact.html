@@ -7,37 +7,36 @@
   <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-   
- <nav class="navbar">
+<nav class="navbar">
 
-    
-    <!-- Logo -->
-    <div class="logo">
-      <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
-    </div>
-    </div>
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
+  </div>
 
- <!-- Menu Links -->
-<div class="nav-links">
-  <a href="index.html">Why Vintage</a>
-  <a href="about.html">About Us</a>
-  <a href="contact.html">Contact Us</a>
-  <a href="menu.html">Menu</a>
-  <a href="food-drinks.html">Food & Drinks</a>
-  <a href="reservation.html">Reservation</a>
-  <a href="gallery.html">Gallery</a>
-</div>
+  <!-- HAMBURGER ICON (Mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
 
+  <!-- NAVIGATION LINKS -->
+  <div class="nav-links">
+    <a href="index.html">Why Vintage</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="food-drinks.html">Food & Drinks</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
 
-    <!-- Right Buttons -->
-    <div class="right-buttons">
-     <a href="login.html" class="btn login-btn" role="button">Login</a>
-      <button class="btn getstarted-btn">Get Started</button>
-    </div>
+  <!-- RIGHT SIDE BUTTONS -->
+  <div class="right-buttons">
+  <a href="login.html" class="btn login-btn">Login</a>
+    <button class="btn getstarted-btn">Get Started</button>
+  </div>
 
-    <!-- ==== VINTAGE BAR FOOTER ==== -->
-
-  </nav>
+</nav>
 
 
   
@@ -124,10 +123,10 @@
     <div class="footer-box">
       <h3>Contact Us</h3>
       <ul>
-        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i> Address: 123 Bar Street, City</li>
-        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i> Phone: +91 12345 67890</li>
-        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i> Email: info@vintagebar.com</li>
-        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i> Hours: Mon–Sun 12 PM – 12 AM</li>
+        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  123 Bar Street, City</li>
+        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i> +91 12345 67890</li>
+        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i>  info@vintagebar.com</li>
+        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>  Mon–Sun 12 PM – 12 AM</li>
       </ul>
     </div>
 
@@ -176,6 +175,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   observer.observe(heading);
 });
+
+
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("show");
+  document.querySelector(".right-buttons").classList.toggle("show");
+}
+
 </script>
 
 </html>

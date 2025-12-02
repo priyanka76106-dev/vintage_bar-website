@@ -12,3 +12,8 @@
   });
 
   observer.observe(lazyH1);
+
+  function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("show");
+  document.querySelector(".right-buttons").classList.toggle("show");
+}

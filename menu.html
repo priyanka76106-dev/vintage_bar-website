@@ -447,110 +447,210 @@ body {
       }
     }
 
-    /* ===== FOOTER ===== */
-.footer {
-  background: #0d0d0d;
-  color: #fff;
-  padding: 50px 20px 20px;
+ .footer {
+  background: #000; /* Pure Black */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 3rem 2rem 2rem;
+  color: #ffffff; /* White text */
 }
 
+/* Page width medium */
 .footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem; /* Equal gap between all columns */
+  margin-bottom: 2.5rem;
 }
 
+/* Footer boxes */
 .footer-box {
-  flex: 1 1 220px;
-  min-width: 220px;
+  margin-left: 20px;
 }
+
 
 .footer-box h2,
 .footer-box h3 {
-  color: #e3b04b;
-  margin-bottom: 15px;
+  color: #ffffff; /* Headings white */
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 .footer-box p,
 .footer-box ul li {
-  color: #ddd;
-  font-size: 15px;
+  color: #ffffff; /* Paragraph & list white */
   line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .footer-box ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-.footer-box ul li {
-  margin-bottom: 8px;
-}
-
+/* Links */
 .footer-box ul li a {
+  color: #ffffff; /* White links */
   text-decoration: none;
-  color: #ddd;
-  transition: 0.3s;
-}
-
-.footer-box ul li a:hover {
-  color: #e3b04b;
-}
-
-.footer-social a {
-  display: inline-block;
-  margin-right: 15px;
-  font-size: 22px;
-  color: #fff;
-  background: #151515;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
   transition: all 0.3s ease;
 }
 
-.footer-social a:hover {
-  color: #e3b04b;
-  background: #222;
-  transform: scale(1.2);
+.footer-box ul li a:hover {
+  color: #c084fc; /* Light purple hover */
+  padding-left: 5px;
 }
 
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+/* Icon boxes */
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.15); /* Soft white tint */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover effect */
+.footer-social a:hover {
+  background: #ffffff;
+  color: #000; /* Black icon when hovered */
+  transform: translateY(-4px) scale(1.12);
+  box-shadow: 0 0 18px #ffffff;
+}
+
+/* Horizontal line */
+.footer-line {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+/* Bottom text */
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid #333;
-  padding-top: 15px;
-  font-size: 14px;
-  color: #aaa;
+  color: #ffffff;
+  font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width: 900px) {
+/* Center only Follow Us heading and icons */
+.footer-box.follow-us h3 {
+  text-align: center;
+}
+
+.footer-box.follow-us .footer-social {
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
   .footer-container {
-    justify-content: center;
-  }
-  .footer-box {
-    flex: 1 1 45%;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 550px) {
   .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-box {
-    flex: 1 1 100%;
+    grid-template-columns: repeat(1, 1fr);
     text-align: center;
   }
   .footer-social {
     justify-content: center;
   }
+}
+
+/* NAVBAR BASE STYLE */
+.navbar {
+  background:black;
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* LOGO */
+.logo img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* NAV LINK STYLE */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* RIGHT BUTTONS */
+.right-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* HAMBURGER (HIDDEN BY DEFAULT) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e2b76c;
+}
+
+/* ===== MOBILE RESPONSIVE NAVBAR ===== */
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .right-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+  }
+
+  .nav-links.show,
+  .right-buttons.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
 }
 
 
@@ -559,38 +659,37 @@ body {
 
 <body>
 
-     <nav class="navbar">
+<nav class="navbar">
 
-    
-    <!-- Logo -->
-    <div class="logo">
-      <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
-    </div>
-    </div>
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
+  </div>
 
- <!-- Menu Links -->
-<div class="nav-links">
-  <a href="index.html">Why Vintage</a>
-  <a href="about.html">About Us</a>
-  <a href="contact.html">Contact Us</a>
-  <a href="menu.html">Menu</a>
-  <a href="food-drinks.html">Food & Drinks</a>
-  <a href="reservation.html">Reservation</a>
-  <a href="gallery.html">Gallery</a>
-</div>
+  <!-- HAMBURGER ICON (Mobile) -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
 
+  <!-- NAVIGATION LINKS -->
+  <div class="nav-links">
+    <a href="index.html">Why Vintage</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="menu.html">Menu</a>
+    <a href="food-drinks.html">Food & Drinks</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
 
-    <!-- Right Buttons -->
-    <div class="right-buttons">
-     <a href="login.html" class="btn login-btn" role="button">Login</a>
-      <button class="btn getstarted-btn">Get Started</button>
-    </div>
+  <!-- RIGHT SIDE BUTTONS -->
+  <div class="right-buttons">
+   <a href="login.html" class="btn login-btn">Login</a>
+    <button class="btn getstarted-btn">Get Started</button>
+  </div>
 
-    <!-- ==== VINTAGE BAR FOOTER ==== -->
+</nav>
 
-
-
-  </nav>
 
   <!-- ===== MENU HERO ===== -->
   <section class="menu-hero">
@@ -716,10 +815,10 @@ body {
     <div class="footer-box">
       <h3>Contact Us</h3>
       <ul>
-        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i> Address: 123 Bar Street, City</li>
-        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i> Phone: +91 12345 67890</li>
-        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i> Email: info@vintagebar.com</li>
-        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i> Hours: Mon–Sun 12 PM – 12 AM</li>
+        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  123 Bar Street, City</li>
+        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 12345 67890</li>
+        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i>  info@vintagebar.com</li>
+        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>  Mon–Sun 12 PM – 12 AM</li>
       </ul>
     </div>
 
@@ -746,4 +845,11 @@ body {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </body>
+<script>
+    function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("show");
+  document.querySelector(".right-buttons").classList.toggle("show");
+}
+
+</script>
 </html>

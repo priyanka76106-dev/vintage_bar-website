@@ -266,6 +266,7 @@ body {
 
 
 /* ===== HERO ===== */
+
 .about-hero {
   position: relative;
   height: 70vh;
@@ -512,7 +513,7 @@ body {
   color: #ccc;
 }
 
-footer {
+.footer {
   background: #000; /* Pure Black */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding: 3rem 2rem 2rem;
@@ -637,4 +638,83 @@ footer {
   .footer-social {
     justify-content: center;
   }
+}
+
+/* NAVBAR BASE STYLE */
+.navbar {
+  background:black;
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* LOGO */
+.logo img {
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* NAV LINK STYLE */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* RIGHT BUTTONS */
+.right-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* HAMBURGER (HIDDEN BY DEFAULT) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e2b76c;
+}
+
+/* ===== MOBILE RESPONSIVE NAVBAR ===== */
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links,
+  .right-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+  }
+
+  .nav-links.show,
+  .right-buttons.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
 }
