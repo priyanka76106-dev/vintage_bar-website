@@ -4,16 +4,24 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>vintage bar</title>
   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="https://images.scalebranding.com/stylish-vb-or-bv-logo-a7ed7a87-fb73-4752-a448-dbf399c45032.jpg" type="Gallery">
  </head>
+ 
  <body>
   <nav class="navbar">
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
-  </div>
+     <!-- <img src="https://png.pngtree.com/png-vector/20220821/ourmid/pngtree-vb-letter-logo-icon-design-template-elements-letter-character-trendy-vector-png-image_48106948.jpg" alt="Vintage Logo"> -->
+      <a href="index.html">
+  <img src="image.png" alt="Description">
+</a>
+    <!-- <p>Vintage bar</p> -->
+     <!-- <img src="https://chatgpt.com/s/m_692eaf552b5c81918b320b7bf6b9c742" alt=""> -->
+     
+  </div> 
 
   <!-- HAMBURGER ICON (Mobile) -->
   <div class="hamburger" onclick="toggleMenu()">
@@ -31,63 +39,69 @@
     <a href="gallery.html">Gallery</a>
   </div>
 
-  <!-- RIGHT SIDE BUTTONS -->
-  <div class="right-buttons">
-  <a href="login.html" class="btn login-btn">Login</a>
-    <button class="btn getstarted-btn">Get Started</button>
-  </div>
+
 
 </nav>
 
-  
+ 
+<div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&h=600&fit=crop" alt="Vintage Bar Interior">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h3>Step Into Timeless Elegance</h3>
+                    <p>Where every corner tells a story of sophistication and class</p>
+                    <p class="carousel-subtext">Experience the golden age of cocktail culture in our meticulously restored 1920s setting</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=1200&h=600&fit=crop" alt="Craft Cocktails">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h3>Artisan Cocktails</h3>
+                    <p>Handcrafted with passion, served with pride</p>
+                    <p class="carousel-subtext">Our master mixologists blend premium spirits with time-honored techniques</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&h=600&fit=crop" alt="Cozy Atmosphere">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h3>Intimate Ambience</h3>
+                    <p>Your sanctuary from the modern world</p>
+                    <p class="carousel-subtext">Plush seating, warm lighting, and the smooth sounds of jazz create the perfect evening</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=1200&h=600&fit=crop" alt="Live Entertainment">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h3>Live Jazz & Blues</h3>
+                    <p>Music that touches the soul</p>
+                    <p class="carousel-subtext">Enjoy live performances every weekend from talented artists near and far</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">
+            <span>❮</span>
+            <span class="btn-text"></span>
+        </button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">
+            <span class="btn-text"></span>
+            <span>❯</span>
+        </button>
+    </div>
+
+    <div class="carousel-dots" id="dots"></div>
 
 
-  <section class="single-carousel">
-  <div class="single-slide fade">
-    <img src="https://thumbs.dreamstime.com/b/vintage-bar-counter-interior-glasses-chairs-moody-lighting-classic-pub-ambiance-empty-ready-evening-drinks-dark-384903269.jpg" alt="Vintage Bar">
-  </div>
 
-  <div class="single-caption">
-    <!-- <h1>Vintage Bar</h1> -->
-    <h1 class="lazy-h1" data-text="Vintage Bar"></h1>
-    <p>Where timeless style meets unforgettable taste</p>
-  </div>
-
-  
-</section>
-
-<!-- <section class="single-carousel">
-  
-  <div class="single-slide fade">
-    <img src="https://thumbs.dreamstime.com/b/vintage-bar-counter-interior-glasses-chairs-moody-lighting-classic-pub-ambiance-empty-ready-evening-drinks-dark-384903269.jpg" alt="Vintage Bar">
-  </div>
-  <div class="single-caption">
-    <h1>Vintage Bar</h1>
-    <p>Where timeless style meets unforgettable taste</p>
-  </div> -->
-
-  <!-- Slide 2 -->
-  <!-- <div class="single-slide fade">
-    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Signature Cocktails">
-  </div>
-  <div class="single-caption">
-    <h1>Signature Cocktails</h1>
-    <p>Savor our expertly crafted drinks for every mood and occasion</p>
-  </div> -->
-
-  <!-- Slide 3 -->
-  <!-- <div class="single-slide fade">
-    <img src="https://images.unsplash.com/photo-1553621042-f6e147245754" alt="Bar Snacks">
-  </div>
-  <div class="single-caption">
-    <h1>Gourmet Bar Snacks</h1>
-    <p>Delicious bites and appetizers to complement your favorite drinks</p>
-  </div>
-</section> -->
-
+        <!-- Slide 2 -->
+ 
 <!-- ===== WHY VINTAGE / BAR FEATURES SECTION ===== -->
 <section class="bar-features-section">
-  <h2 class="section-title">Why Vintage Bar?</h2>
+  <h2 class="section-title">Why Choose Vintage</h2>
 
   <div class="features-container">
 
@@ -108,10 +122,153 @@
       <h3>Classic Ambience</h3>
       <p>A luxurious vintage environment with soulful music and warm lighting.</p>
     </div>
+    <br>
 
-  </div>
+ 
 </section>
 
+
+    <section class="ambience-section">
+        <div class="container">
+            <h2>The Ambience</h2>
+            <div class="ambience-content">
+                <div class="ambience-text">
+                    <p>Step through our doors and travel back in time. The Vintage Bar features authentic 1920s décor with rich mahogany woodwork, plush leather seating, and soft Edison bulb lighting that creates an intimate, sophisticated atmosphere.</p>
+                    <br>
+                    <p>Every detail has been meticulously chosen - from the antique brass fixtures to the vintage jazz posters adorning the walls. Our cozy booths offer privacy for intimate conversations, while our classic bar invites you to watch our skilled bartenders perform their craft.</p>
+                    <br>
+                    <p>The gentle hum of conversation mingles with the smooth sounds of vinyl records, creating a sanctuary from the modern world outside.</p>
+                </div>
+                <div class="ambience-image">
+                    <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800" alt="Vintage Bar Ambience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book-bar" class="booking-section">
+    <div class="container">
+        <h2>Book The Vintage Bar</h2>
+        <p class="booking-subtitle">Host Your Special Event in Timeless Elegance</p>
+
+        <div class="booking-grid">
+
+            <!-- Office Parties -->
+            <!-- Office Parties -->
+<div class="booking-card">
+    <div class="booking-icon">
+        <img src="https://i.pinimg.com/1200x/11/67/df/1167dfa2ed7b41a1ed695653c7966b54.jpg">
+    </div>
+    <h3>Office Parties</h3>
+    <p>Celebrate your team's success in style. We offer customized packages for corporate events with exclusive bar access and tailored menus.</p>
+    <a href="contact.html" onclick="openBookingForm('Office Party')" class="book-btn">Book Now</a>
+</div>
+
+<!-- Birthday -->
+<div class="booking-card">
+    <div class="booking-icon">
+        <img src="https://i.pinimg.com/736x/58/e1/71/58e1712b7cea2411eac55762bb1a0447.jpg">
+    </div>
+    <h3>Birthday Celebrations</h3>
+    <p>Make your birthday unforgettable with our vintage ambience, special cocktails, and dedicated service for you and your guests.</p>
+    <a href="contact.html" onclick="openBookingForm('Birthday')" class="book-btn">Book Now</a>
+</div>
+
+<!-- Anniversaries -->
+<div class="booking-card">
+    <div class="booking-icon">
+        <img src="https://i.pinimg.com/1200x/bd/75/07/bd75073d1a9f6d5aafc9b294b00b8233.jpg">
+    </div>
+    <h3>Anniversaries</h3>
+    <p>Celebrate love and memories in our romantic setting. Perfect for couples looking for an intimate and elegant experience.</p>
+    <a href="contact.html" onclick="openBookingForm('Anniversary')" class="book-btn">Book Now</a>
+</div>
+
+<!-- Private Functions -->
+<div class="booking-card">
+    <div class="booking-icon">
+        <img src="https://i.pinimg.com/1200x/59/5e/33/595e330be324bdcc728423807f83b693.jpg">
+    </div>
+    <h3>Private Functions</h3>
+    <p>Any special occasion deserves a special venue. Book the entire bar for weddings, reunions, or any celebration you envision.</p>
+    <a href="contact.html" onclick="openBookingForm('Private Function')" class="book-btn">Book Now</a>
+</div>
+
+        <div class="booking-highlights">
+            <h3>What We Offer for Private Events</h3>
+            <div class="highlights-grid">
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Full Bar Access</span></div>
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Customized Menu</span></div>
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Dedicated Staff</span></div>
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Live Music Option</span></div>
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Decoration Support</span></div>
+                <div class="highlight-item"><span class="highlight-icon">✓</span><span>Photography Area</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- scrroll -->
+
+<!-- <a href="brand.html"></a> -->
+  <!-- Updated Class Name -->
+    <div class="brand-header">
+        <h1>Premium Bar Brands</h1>
+        <p>Whiskey • Vodka • Beer • Rum • Tequila • Gin • Wine</p>
+    </div>
+
+    <div class="scroll-container">
+        <div class="brands-scroll" id="brandsScroll"></div>
+    </div>
+
+
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBookingForm()">&times;</span>
+        <h2>Book Your Event</h2>
+
+        <form id="bookingForm" onsubmit="submitBooking(event)">
+            <div class="form-group">
+                <label for="eventType">Event Type</label>
+                <input type="text" id="eventType" name="eventType" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Event Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests *</label>
+                    <input type="number" id="guests" name="guests" min="10" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Special Requests</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your event..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Booking Request</button>
+        </form>
+    </div>
+</div>
 
 
   <section class="home-bar-food">
@@ -134,6 +291,10 @@
     </div>
   </div>
 </section>
+
+<!-- added
+  -->
+ 
 
 <!-- ===== FOOD & DRINKS GALLERY ===== -->
 <section class="food-gallery-section">
@@ -162,7 +323,7 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
-    
+
     <div class="footer-box">
       <h2>About Vintage</h2>
       <p>Vintage is a bar offering food, drinks, and a premium bar experience. Explore our menu, gallery, and make reservations for an unforgettable night.</p>
@@ -180,34 +341,36 @@
       </ul>
     </div>
 
-<div class="footer-box">
-  <h3>Contact Us</h3>
-  <ul>
-    <li><i class="fa-solid fa-location-dot" style="color: #ff5e57;"></i>  123 Bar Street, City</li>
-    <li><i class="fa-solid fa-phone" style="color: #00d1ff;"></i>  +91 12345 67890</li>
-    <li><i class="fa-solid fa-envelope" style="color: #ffb400;"></i>  info@vintagebar.com</li>
-    <li><i class="fa-regular fa-clock" style="color: #8aff00;"></i>  Mon–Sun 12 PM – 12 AM</li>
-  </ul>
-</div>
+    
 
-<div class="footer-box follow-us">
-  <h3>Follow Us</h3>
-  <div class="footer-social">
-    <a href="#"><i class="fa-brands fa-instagram" style="color:#E1306C;"></i></a>
-    <a href="#"><i class="fa-brands fa-facebook-f" style="color:#1877F2;"></i></a>
-    <a href="#"><i class="fa-brands fa-twitter" style="color:#1DA1F2;"></i></a>
-    <a href="#"><i class="fa-brands fa-linkedin-in" style="color:#0077B5;"></i></a>
-  </div>
-</div>
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  Vintage Bar, Marine Drive, Mumbai, Maharashtra 400020</li>
+        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 9045676251</li>
+        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i> info@vintagebar.com</li>
+        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>Mon–Sun 12PM - 12AM</li>
+      </ul>
+    </div>
+
+    <div class="footer-box follow-us">
+      <h3>Follow Us</h3>
+      <div class="footer-social">
+        <a href="#" style="background:#E1306C;"><i class="fa-brands fa-instagram" style="color:white;"></i></a>
+        <a href="#" style="background:#1877F2;"><i class="fa-brands fa-facebook-f" style="color:white;"></i></a>
+        <a href="#" style="background:#1DA1F2;"><i class="fa-brands fa-twitter" style="color:white;"></i></a>
+        <a href="#" style="background:#0A66C2;"><i class="fa-brands fa-linkedin-in" style="color:white;"></i></a>
+      </div>
+    </div>
 
   </div>
 
   <hr class="footer-line">
 
   <div class="footer-bottom">
-   Copyright © Hidden Place. All Rights Reserved
+    ©2025 Vintage Bar. All Rights Reserved.
   </div>
-</footer>
+</footer>>
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="java.js"></script>

@@ -59,7 +59,7 @@ body {
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 3rem;
       align-items: center;
     }
 
@@ -80,113 +80,11 @@ body {
   text-shadow: 0 0 8px rgba(255, 217, 112, 0.7);
 } 
 
-    .right-buttons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .btn {
-      padding: 0.6rem 1.5rem;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-    }
-
-    .login-btn {
-      background: transparent;
-      color: #c084fc;
-      border: 2px solid #9333ea;
-    }
-
-    .login-btn:hover {
-      background: #9333ea;
-      color: white;
-    }
-
-    .getstarted-btn {
-      background: #9333ea;
-      color: white;
-      box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
-    }
-
-    .getstarted-btn:hover {
-      background: #7e22ce;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(147, 51, 234, 0.6);
-    }
-
-    /* Login Container */
-    .login-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .login-box {
-      background: linear-gradient(135deg, rgba(30, 27, 75, 0.9), rgba(88, 28, 135, 0.9));
-      backdrop-filter: blur(20px);
-      padding: 3rem 2.5rem;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 450px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(168, 85, 247, 0.2);
-    }
-
-    .login-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .login-header h1 {
-      font-size: 2.5rem;
-      color: white;
-      margin-bottom: 0.5rem;
-    }
-
-    .login-header p {
-      color: #e9d5ff;
-      font-size: 1rem;
-    }
-
-    .btn {
-  padding: 8px 16px;
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 2px solid #c9a86a;
-  transition: 0.3s ease-in-out;
-}
-
-.login-btn {
-  background: transparent;
-  color: #c9a86a;
-}
-
-.login-btn:hover {
-  background: #c9a86a;
-  color: #151515;
-  box-shadow: 0 0 12px rgba(255, 214, 130, 0.8);
-}
+ 
+   
     
 
-    
-.getstarted-btn {
-  background: #c9a86a;
-  color: #151515;
-  font-weight: 600;
-}
 
-.getstarted-btn:hover {
-  background: #e7c98a;
-  box-shadow: 0 0 12px rgba(255, 214, 130, 0.9);
-}
    
 /* Responsive */
 @media(max-width: 768px){
@@ -195,13 +93,7 @@ body {
   }
 }
 
- body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d1f1f 100%);
-            color: #f5f5f5;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
+
 
         .header {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23000" width="1200" height="400"/></svg>');
@@ -497,25 +389,22 @@ body {
 /* ===== FOOTER ===== */
 
 .footer {
-  background: #000; /* Pure Black */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3rem 2rem 2rem;
-  color: #ffffff; /* White text */
+  background: #000;
+  padding: 3rem 1.5rem 2rem;
+  color: #fff;
 }
 
-/* Page width medium */
 .footer-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3.2rem; /* Equal gap between all columns */
-  margin-bottom: 2.5rem;
+  gap: 7rem;
 }
 
 /* Footer boxes */
 .footer-box {
-  margin-left: 20px;
+  margin-left: 20px;
 }
 
 
@@ -550,7 +439,25 @@ body {
   color: #c084fc; /* Light purple hover */
   padding-left: 5px;
 }
+/* Make Contact Us list horizontal */
+.footer-box.contact-us ul {
+  display: flex;
+  flex-direction: column; /* default vertical for small screens */
+  gap: 0.7rem; /* vertical spacing */
+}
 
+@media (min-width: 768px) {
+  .footer-box.contact-us ul {
+    flex-direction: row; /* horizontal layout for larger screens */
+    flex-wrap: wrap;     /* wrap if not enough space */
+    gap: 2rem;           /* horizontal spacing between items */
+  }
+}
+
+/* Optional: spacing between icon and text */
+.footer-box.contact-us ul li i {
+  margin-right: 0.5rem;
+}
 /* Social Icons */
 .footer-social {
   display: flex;
@@ -713,8 +620,12 @@ body {
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
-  </div>
+     <!-- <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">  -->
+   <a href="index.html">
+  <img src="image.png" alt="Description">
+</a>
+    </div> 
+     
 
   <!-- HAMBURGER ICON (Mobile) -->
   <div class="hamburger" onclick="toggleMenu()">
@@ -732,11 +643,7 @@ body {
     <a href="gallery.html">Gallery</a>
   </div>
 
-  <!-- RIGHT SIDE BUTTONS -->
-  <div class="right-buttons">
-    <a href="login.html" class="btn login-btn">Login</a>
-    <button class="btn getstarted-btn">Get Started</button>
-  </div>
+
 
 </nav>
 
@@ -951,13 +858,15 @@ body {
       </ul>
     </div>
 
+    
+
     <div class="footer-box">
       <h3>Contact Us</h3>
       <ul>
-        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  123 Bar Street, City</li>
-        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 12345 67890</li>
-        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i>  info@vintagebar.com</li>
-        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>  Mon–Sun 12 PM – 12 AM</li>
+        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  Vintage Bar, Marine Drive, Mumbai, Maharashtra 400020</li>
+        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 9045676251</li>
+        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i> info@vintagebar.com</li>
+        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>Mon–Sun 12PM - 12AM</li>
       </ul>
     </div>
 
@@ -976,9 +885,9 @@ body {
   <hr class="footer-line">
 
   <div class="footer-bottom">
-    Copyright © Hidden Place. All Rights Reserved
+    ©2025 Vintage Bar. All Rights Reserved.
   </div>
-</footer>
+</footer>>
 
 <!-- FONT AWESOME LINK -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

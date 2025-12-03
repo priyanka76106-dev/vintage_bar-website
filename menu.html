@@ -96,99 +96,9 @@
       font-size: 0.95rem;
     }
 
-    .login-btn {
-      background: transparent;
-      color: #c084fc;
-      border: 2px solid #9333ea;
-    }
+  
 
-    .login-btn:hover {
-      background: #9333ea;
-      color: white;
-    }
 
-    .getstarted-btn {
-      background: #9333ea;
-      color: white;
-      box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
-    }
-
-    .getstarted-btn:hover {
-      background: #7e22ce;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(147, 51, 234, 0.6);
-    }
-
-    /* Login Container */
-    .login-container {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .login-box {
-      background: linear-gradient(135deg, rgba(30, 27, 75, 0.9), rgba(88, 28, 135, 0.9));
-      backdrop-filter: blur(20px);
-      padding: 3rem 2.5rem;
-      border-radius: 20px;
-      width: 100%;
-      max-width: 450px;
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(168, 85, 247, 0.2);
-    }
-
-    .login-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .login-header h1 {
-      font-size: 2.5rem;
-      color: white;
-      margin-bottom: 0.5rem;
-    }
-
-    .login-header p {
-      color: #e9d5ff;
-      font-size: 1rem;
-    }
-
-    .btn {
-  padding: 8px 16px;
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 2px solid #c9a86a;
-  transition: 0.3s ease-in-out;
-}
-
-.login-btn {
-  background: transparent;
-  color: #c9a86a;
-}
-
-.login-btn:hover {
-  background: #c9a86a;
-  color: #151515;
-  box-shadow: 0 0 12px rgba(255, 214, 130, 0.8);
-}
-    
-
-    
-.getstarted-btn {
-  background: #c9a86a;
-  color: #151515;
-  font-weight: 600;
-}
-
-.getstarted-btn:hover {
-  background: #e7c98a;
-  box-shadow: 0 0 12px rgba(255, 214, 130, 0.9);
-}
-   
 
 /* Responsive */
 @media(max-width: 768px){
@@ -270,7 +180,91 @@ body {
   color: #efdfdf;
 }
 
+/* ===== GALLERY SLIDER ===== */
+    .gallery-section {
+        background: linear-gradient(135deg, #2c1810 0%, #1a1410 100%);
+        padding: 4rem 0;
+        overflow: hidden;
+    }
 
+    .gallery-section h2 {
+        text-align: center;
+        font-size: 2.4rem;
+        color: #d4a574;
+        font-family: Georgia, serif;
+        margin-bottom: 3rem;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 1rem 0;
+    }
+
+    .slider-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+        width: fit-content;
+    }
+
+    .slider-track:hover {
+        animation-play-state: paused;
+    }
+
+    .slide-item {
+        flex: 0 0 300px;
+        height: 250px;
+        margin: 0 1rem;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border: 3px solid #d4a574;
+        transition: transform 0.3s ease;
+        position: relative;
+    }
+
+    .slide-item:hover {
+        transform: scale(1.05);
+        border-color: #e8d5b7;
+        box-shadow: 0 8px 25px rgba(212, 165, 116, 0.5);
+    }
+
+    .slide-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slide-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(26, 20, 16, 0.95), transparent);
+        color: #e8d5b7;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .slide-item {
+            flex: 0 0 250px;
+            height: 200px;
+        }
+    }
+    
 /* =========================
       MENU HERO
 ========================= */
@@ -447,26 +441,23 @@ body {
       }
     }
 
- .footer {
-  background: #000; /* Pure Black */
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 3rem 2rem 2rem;
-  color: #ffffff; /* White text */
+.footer {
+  background: #000;
+  padding: 3rem 1.5rem 2rem;
+  color: #fff;
 }
 
-/* Page width medium */
 .footer-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3.2rem; /* Equal gap between all columns */
-  margin-bottom: 2.5rem;
+  gap: 7rem;
 }
 
 /* Footer boxes */
 .footer-box {
-  margin-left: 20px;
+  margin-left: 20px;
 }
 
 
@@ -523,7 +514,25 @@ body {
   transition: all 0.35s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
+/* Make Contact Us list horizontal */
+.footer-box.contact-us ul {
+  display: flex;
+  flex-direction: column; /* default vertical for small screens */
+  gap: 0.7rem; /* vertical spacing */
+}
 
+@media (min-width: 768px) {
+  .footer-box.contact-us ul {
+    flex-direction: row; /* horizontal layout for larger screens */
+    flex-wrap: wrap;     /* wrap if not enough space */
+    gap: 2rem;           /* horizontal spacing between items */
+  }
+}
+
+/* Optional: spacing between icon and text */
+.footer-box.contact-us ul li i {
+  margin-right: 0.5rem;
+}
 /* Hover effect */
 .footer-social a:hover {
   background: #ffffff;
@@ -663,7 +672,10 @@ body {
 
   <!-- LOGO -->
   <div class="logo">
-    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo">
+    <!-- <img src="https://www.creativefabrica.com/wp-content/uploads/2021/10/21/Vintage-Bar-Cafe-Stamp-Emblem-Badge-Logo-Graphics-13483623-1-580x387.jpg" alt="Vintage Logo"> -->
+      <a href="index.html">
+  <img src="image.png" alt="Description">
+</a>
   </div>
 
   <!-- HAMBURGER ICON (Mobile) -->
@@ -682,11 +694,6 @@ body {
     <a href="gallery.html">Gallery</a>
   </div>
 
-  <!-- RIGHT SIDE BUTTONS -->
-  <div class="right-buttons">
-   <a href="login.html" class="btn login-btn">Login</a>
-    <button class="btn getstarted-btn">Get Started</button>
-  </div>
 
 </nav>
 
@@ -712,6 +719,145 @@ body {
         <div class="location-box">
           <h3>Mumbai</h3>
           <p>Bandra • Andheri • Colaba</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- slider -->
+   <section class="gallery-section">
+    <h2>Our Bar & Menu Gallery</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        <!-- First Set of Images -->
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600" alt="Classic Cocktails">
+          <div class="slide-caption">Classic Cocktails</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600" alt="Whiskey Selection">
+          <div class="slide-caption">Premium Whiskey</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600" alt="Craft Beer">
+          <div class="slide-caption">Craft Beer Selection</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600" alt="Wine Collection">
+          <div class="slide-caption">Fine Wines</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600" alt="Mojito">
+          <div class="slide-caption">Fresh Mojitos</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" alt="Gourmet Appetizers">
+          <div class="slide-caption">Gourmet Appetizers</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1598514982901-ae62764ae75e?w=600" alt="Tapas">
+          <div class="slide-caption">Spanish Tapas</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1560963805-6c64417e3413?w=600" alt="Martini">
+          <div class="slide-caption">Perfect Martini</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1509669803555-fd5d265c8739?w=600" alt="Bar Interior">
+          <div class="slide-caption">Vintage Bar Ambience</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600" alt="Cheese Platter">
+          <div class="slide-caption">Artisan Cheese</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=600" alt="Old Fashioned">
+          <div class="slide-caption">Old Fashioned</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600" alt="Grilled Food">
+          <div class="slide-caption">Grilled Specialties</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=600" alt="Champagne">
+          <div class="slide-caption">Champagne Toast</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Bar Snacks">
+          <div class="slide-caption">Premium Bar Snacks</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=600" alt="Margarita">
+          <div class="slide-caption">Classic Margarita</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600" alt="Sliders">
+          <div class="slide-caption">Gourmet Sliders</div>
+        </div>
+
+        <!-- Duplicate Set for Seamless Loop -->
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=600" alt="Classic Cocktails">
+          <div class="slide-caption">Classic Cocktails</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600" alt="Whiskey Selection">
+          <div class="slide-caption">Premium Whiskey</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600" alt="Craft Beer">
+          <div class="slide-caption">Craft Beer Selection</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=600" alt="Wine Collection">
+          <div class="slide-caption">Fine Wines</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600" alt="Mojito">
+          <div class="slide-caption">Fresh Mojitos</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" alt="Gourmet Appetizers">
+          <div class="slide-caption">Gourmet Appetizers</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1598514982901-ae62764ae75e?w=600" alt="Tapas">
+          <div class="slide-caption">Spanish Tapas</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1560963805-6c64417e3413?w=600" alt="Martini">
+          <div class="slide-caption">Perfect Martini</div>
+        </div>
+    
+
+
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=600" alt="Cheese Platter">
+          <div class="slide-caption">Artisan Cheese</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=600" alt="Old Fashioned">
+          <div class="slide-caption">Old Fashioned</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600" alt="Grilled Food">
+          <div class="slide-caption">Grilled Specialties</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?w=600" alt="Champagne">
+          <div class="slide-caption">Champagne Toast</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600" alt="Bar Snacks">
+          <div class="slide-caption">Premium Bar Snacks</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1587223962930-cb7f31384c19?w=600" alt="Margarita">
+          <div class="slide-caption">Classic Margarita</div>
+        </div>
+        <div class="slide-item">
+          <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=600" alt="Sliders">
+          <div class="slide-caption">Gourmet Sliders</div>
         </div>
       </div>
     </div>
@@ -812,13 +958,15 @@ body {
       </ul>
     </div>
 
+    
+
     <div class="footer-box">
       <h3>Contact Us</h3>
       <ul>
-        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  123 Bar Street, City</li>
-        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 12345 67890</li>
-        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i>  info@vintagebar.com</li>
-        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>  Mon–Sun 12 PM – 12 AM</li>
+        <li><i class="fa-solid fa-location-dot" style="color:#e3b04b;"></i>  Vintage Bar, Marine Drive, Mumbai, Maharashtra 400020</li>
+        <li><i class="fa-solid fa-phone" style="color:#34d399;"></i>  +91 9045676251</li>
+        <li><i class="fa-solid fa-envelope" style="color:#60a5fa;"></i> info@vintagebar.com</li>
+        <li><i class="fa-regular fa-clock" style="color:#f87171;"></i>Mon–Sun 12PM - 12AM</li>
       </ul>
     </div>
 
@@ -837,9 +985,9 @@ body {
   <hr class="footer-line">
 
   <div class="footer-bottom">
-    Copyright © Hidden Place. All Rights Reserved
+    ©2025 Vintage Bar. All Rights Reserved.
   </div>
-</footer>
+</footer>>
 
 <!-- FONT AWESOME LINK -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
