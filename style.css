@@ -7,6 +7,7 @@ body {
 }
 
 /* ===== NAVBAR ===== */
+/* MAKE NAVBAR STICKY */
 .navbar {
   background: black;
   backdrop-filter: blur(10px);
@@ -15,16 +16,57 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: sticky;   /* THIS MAKES IT STICKY */
+  top: 0;             /* STICK TO TOP */
+  z-index: 9999;      /* always above all content */
   flex-wrap: wrap;
 }
+
 
 .logo img {
   height: 60px;
   width: auto;
   border-radius: 50%;
+}
+
+/* humberger */
+/* Hamburger icon - hidden on desktop */
+.hamburger {
+    display: none;          /* hide by default */
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;            /* color of bars */
+    z-index: 1000;          /* make sure it’s above other elements */
+}
+
+/* Show hamburger on mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;       /* hide nav links initially */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;       /* show menu when active */
+    }
+}
+
+.navbar {
+    position: relative;
+    z-index: 100;
 }
 
 /* Navigation Links */
@@ -1280,3 +1322,4 @@ h3::after {
                 grid-template-columns: 1fr;
             }
         }
+        

@@ -80,25 +80,25 @@ let currentSlide = 0;
 // bradn
 
    const brands = [
-        { name: "Jack Daniel's", type: "Whiskey", image: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400" },
+        { name: "Jack Daniel's", type: "Whiskey", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgjDgfIiOnEena3bxxQGsfWymn2INpU0z2lw&s" },
         { name: "Johnnie Walker", type: "Whiskey", image: "https://images.unsplash.com/photo-1626897505254-e0f811aa9bf7?w=400" },
-        { name: "Jameson", type: "Whiskey", image: "https://images.unsplash.com/photo-1584370848010-cf61e8c65a01?w=400" },
-        { name: "Chivas Regal", type: "Whiskey", image: "https://images.unsplash.com/photo-1600180758890-6f6431e52a41?w=400" },
+        { name: "Jameson", type: "Whiskey", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPDEVSHxiEnpMMH_iZZq5sK5VeYkF4MWdm4A&s" },
+        { name: "Chivas Regal", type: "Whiskey", image: "https://drinksenthusiast.com/wp-content/uploads/2014/08/chivas-regal.jpeg" },
         { name: "Smirnoff", type: "Vodka", image: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=400" },
-        { name: "Grey Goose", type: "Vodka", image: "https://images.unsplash.com/photo-1560512823-829485b8bf24?w=400" },
-        { name: "Absolut", type: "Vodka", image: "https://images.unsplash.com/photo-1617139651283-14e404273bb0?w=400" },
-        { name: "Bacardi", type: "Rum", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400" },
-        { name: "Captain Morgan", type: "Rum", image: "https://images.unsplash.com/photo-1621996349842-788ed0f2ec52?w=400" },
-        { name: "Budweiser", type: "Beer", image: "https://images.unsplash.com/photo-1608043892067-5f24ab2c45dd?w=400" },
-        { name: "Heineken", type: "Beer", image: "https://images.unsplash.com/photo-1607681034644-c1f3e2dfc4ce?w=400" },
-        { name: "Corona", type: "Beer", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400" },
-        { name: "Kingfisher", type: "Beer", image: "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=400" },
-        { name: "Patron", type: "Tequila", image: "https://images.unsplash.com/photo-1552553037-a37430bbf2cb?w=400" },
-        { name: "Jose Cuervo", type: "Tequila", image: "https://images.unsplash.com/photo-1608534507565-98ec6633b457?w=400" },
-        { name: "Tanqueray", type: "Gin", image: "https://images.unsplash.com/photo-1616353073217-3221b42d0021?w=400" },
-        { name: "Bombay Sapphire", type: "Gin", image: "https://images.unsplash.com/photo-1621996348339-7a1be11e0633?w=400" },
-        { name: "Red Wine", type: "Wine", image: "https://images.unsplash.com/photo-1578596860774-abb06e5d2a9a?w=400" },
-        { name: "White Wine", type: "Wine", image: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?w=400" }
+        { name: "Grey Goose", type: "Vodka", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsQkE8IC_Hhl2HAbbZO0dMzuzzF--heiSXSQ&s" },
+        { name: "Absolut", type: "Vodka", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMd3zSr978b06C54w0nNAxleVZ7H-dUghrkQ&s" },
+        { name: "Bacardi", type: "Rum", image: "https://assets.telegraphindia.com/telegraph/2022/Oct/1666974845_bacardi.jpg" },
+        { name: "Captain Morgan", type: "Rum", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJo7qT4XxuhGnp3RQ1latYKz365tiaRdlxcA&s" },
+        { name: "Budweiser", type: "Beer", image: "https://images.picxy.com/cache/2019/11/8/fcb5c7d143d088ace5928f3df98c2b2c.jpg" },
+        { name: "Heineken", type: "Beer", image: "https://fortune.com/img-assets/wp-content/uploads/2016/01/181323297.jpg?w=1440&q=75" },
+        { name: "Corona", type: "Beer", image: "https://images.pexels.com/photos/16229687/pexels-photo-16229687/free-photo-of-bottle-of-corona-beer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+        { name: "Kingfisher", type: "Beer", image: "https://akm-img-a-in.tosshub.com/businesstoday/images/story/201804/kingfisher-beer_660_041918082956.jpg?size=948:533" },
+        { name: "Patron", type: "Tequila", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS322_6QWwRZMu7acxWqyNzVKqSJqh-nCfnvA&s" },
+        { name: "Jose Cuervo", type: "Tequila", image: "https://arthurcantina.com/cdn/shop/files/Jose_Cuervo_Tradicional_Reposado_750mL_-_Arthur_Cantina_Wine_Liquor_-_-_tag1_-_tag2_-2694294.jpg?v=1724541759&width=480" },
+        { name: "Tanqueray", type: "Gin", image: "https://whisky.my/cdn-cgi/image/quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/TANQUERAY-No.10-Gin-11.jpg" },
+        { name: "Bombay Sapphire", type: "Gin", image: "https://s3.ap-southeast-1.amazonaws.com/cdn1.sgliteasset.com/theliquo/images/texteditor/bombay_sapphire_1709179285.jpg" },
+        { name: "Red Wine", type: "Wine", image: "https://cms.cdn4vest.com/images/sweet-red-wine-for-beginners-1.width-800.jpg" },
+        { name: "White Wine", type: "Wine", image: "https://worldwine.com.au/cdn/shop/articles/6386686.webp?v=1651229200&width=1024" }
     ];
 
     function createBrandCard(brand) {
@@ -152,3 +152,7 @@ window.onclick = function (e) {
 };
 
 // brand
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}

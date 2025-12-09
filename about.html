@@ -20,9 +20,15 @@
   </div>
 
   <!-- HAMBURGER ICON (Mobile) -->
-  <div class="hamburger" onclick="toggleMenu()">
+  <!-- <div class="hamburger" onclick="toggleMenu()">
     <i class="fa-solid fa-bars"></i>
-  </div>
+  </div> -->
+  <div class="hamburger" onclick="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
 
   <!-- NAVIGATION LINKS -->
   <div class="nav-links">
@@ -120,33 +126,76 @@
 <section class="team-section">
   <h2>Our Team</h2>
   <p class="team-sub">Meet the passionate people behind Vintage Bar</p>
+
   <div class="container team-container">
-    
-    <div class="team-card">
-      <img src="https://assets.zeezest.com/blogs/PROD_Horizontal%286%29_1707816000757.jpg" alt="Team Member">
-      <h3>Arjun Kumar</h3>
-      <p>Head Bartender</p>
+
+    <!-- Team Card 1 -->
+    <div class="team-card flip-card" onclick="this.classList.toggle('active')">
+      <div class="flip-inner">
+        <!-- Front -->
+        <div class="flip-front">
+          <img src="https://assets.zeezest.com/blogs/PROD_Horizontal%286%29_1707816000757.jpg" alt="Team Member">
+          <h3>Arjun Kumar</h3>
+          <p>Head Bartender</p>
+        </div>
+
+        <!-- Back -->
+        <div class="flip-back">
+          <h3>Arjun Kumar</h3>
+          <p>Head Bartender</p>
+          <p class="detail">Expert in crafting cocktails with unique flavors. 10+ years of experience in mixology and bar curation.</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="team-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBEgSTKt0gMvM5ZDcvwHvL9cOq1ThT3AYAeg&s" alt="Team Member">
-      <h3>Priya Singh</h3>
-      <p>Chef</p>
+
+    <!-- Team Card 2 -->
+    <div class="team-card flip-card" onclick="this.classList.toggle('active')">
+      <div class="flip-inner">
+        <!-- Front -->
+        <div class="flip-front">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBEgSTKt0gMvM5ZDcvwHvL9cOq1ThT3AYAeg&s" alt="Team Member">
+          <h3>Priya Singh</h3>
+          <p>Chef</p>
+        </div>
+
+        <!-- Back -->
+        <div class="flip-back">
+          <h3>Priya Singh</h3>
+          <p>Chef</p>
+          <p class="detail">Specializes in modern fusion cuisine. Passionate about fresh ingredients & bold flavors.</p>
+        </div>
+      </div>
     </div>
-    
-    <div class="team-card">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQEQZo0bwakTkA/profile-displayphoto-scale_200_200/B4DZg743sPHYAc-/0/1753351421433?e=2147483647&v=beta&t=BoUBIeJ5qX_q9WtQuxUspaxsbaS8US7z5M-7zlOZPN0" alt="Team Member">
-      <h3>Rohan Mehta</h3>
-      <p>Manager</p>
+
+    <!-- Team Card 3 -->
+    <div class="team-card flip-card" onclick="this.classList.toggle('active')">
+      <div class="flip-inner">
+        <!-- Front -->
+        <div class="flip-front">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQEQZo0bwakTkA/profile-displayphoto-scale_200_200/B4DZg743sPHYAc-/0/1753351421433?e=2147483647&v=beta&t=BoUBIeJ5qX_q9WtQuxUspaxsbaS8US7z5M-7zlOZPN0" alt="Team Member">
+          <h3>Rohan Mehta</h3>
+          <p>Manager</p>
+        </div>
+
+        <!-- Back -->
+        <div class="flip-back">
+          <h3>Rohan Mehta</h3>
+          <p>Manager</p>
+          <p class="detail">Ensures the best guest experience. Skilled in hospitality, customer service, and operations.</p>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
 
-  </main>
 
- 
-<footer class="footer">
+  </div>
+</section>
+
+  </main>
+  <!-- Footer -->
+ <footer class="footer">
   <div class="footer-container">
 
     <div class="footer-box">
@@ -196,6 +245,12 @@
     ©2025 Vintage Bar. All Rights Reserved.
   </div>
 </footer>>
+
+ 
+
+
+   
+
 <script>
       // Select the H1
   const lazyH1 = document.querySelector('.lazy-h1');
@@ -219,6 +274,6 @@
 }
 
 </script>
-  <script src="java.js"></script>
+  <!-- <script src="java.js"></script> -->
 </body>
 </html>
