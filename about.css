@@ -26,14 +26,21 @@
   border-radius: 50%;
 }
 
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
 .nav-links a {
-  color: white;
+  color: rgb(236, 226, 226);
   text-decoration: none;
-  font-size: 40px;
   font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
   position: relative;
   padding-bottom: 5px;
-  transition: 0.3s;
 }
 
 .nav-links a::after {
@@ -48,20 +55,6 @@
   border-radius: 10px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-.nav-links a {
-  color: rgb(236, 226, 226);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 0.95rem;
-}
-
 .nav-links a:hover::after {
   width: 100%;
 }
@@ -71,24 +64,18 @@
   text-shadow: 0 0 8px rgba(255, 217, 112, 0.7);
 }
 
-/* Responsive */
-@media(max-width: 768px){
-  .nav-links {
-    display: none;
-  }
-}
-
-/* ===== HAMBURGER MENU ===== */
-.menu-icon {
-  display: none;
+/* Hamburger Menu */
+.menu-icon,
+.hamburger {
   font-size: 32px;
   cursor: pointer;
   color: #e2b76c;
+  display: none;
 }
 
-/* ===== MOBILE RESPONSIVE ===== */
+/* MOBILE NAVIGATION */
 @media (max-width: 850px) {
-  .menu-icon {
+  .hamburger {
     display: block;
   }
 
@@ -107,10 +94,11 @@
     animation: fadeDown 0.3s ease;
   }
 
-  .nav-links.active {
+  .nav-links.show {
     display: flex;
   }
 }
+
 
 /* Smooth dropdown effect */
 @keyframes fadeDown {
@@ -125,7 +113,6 @@
 }
 
 /* ===== HERO ===== */
-
 .about-hero {
   position: relative;
   height: 70vh;
@@ -329,6 +316,9 @@
   border-radius: 15px;
   text-align: center;
   border: 1px solid #333;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-card img {
@@ -346,6 +336,7 @@
 .team-card p {
   color: #ccc;
 }
+
 .flip-card {
   perspective: 1000px;
   cursor: pointer;
@@ -386,14 +377,7 @@
   color: #dcdcdc;
   line-height: 1.6;
 }
-/* FIX TEAM CARD HEIGHT */
-.team-card {
-  height: 350px;   /* Prevent collapse */
-  position: relative;
-  overflow: hidden;
-}
 
-/* footer */
 /* ===== FOOTER ===== */
 .footer {
   background: #000;
@@ -489,7 +473,6 @@
   justify-content: center;
 }
 
-/* Make contact list horizontal on larger screens */
 .footer-box.contact-us ul {
   display: flex;
   flex-direction: column;
@@ -501,9 +484,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-  }
-  .footer-box.contact-us ul li i {
-    margin-right: 0.5rem;
   }
 }
 
@@ -521,77 +501,7 @@
   }
 }
 
-/* NAVBAR BASE STYLE */
-.navbar {
-  background:black;
-  backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* LOGO */
-.logo img {
-  height: 60px;
-  border-radius: 50%;
-}
-
-/* NAV LINKS (DESKTOP) */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* RIGHT BUTTONS */
-.right-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #e2b76c;
-}
-
-/* MOBILE NAV */
-@media (max-width: 900px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links,
-  .right-buttons {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .nav-links.show,
-  .right-buttons.show {
-    display: flex;
-  }
-
-  .navbar {
-    flex-wrap: wrap;
-  }
-}
-
-/* ---------------------------------------------------------
-   ✔ NEW MEDIA QUERIES ADDED BELOW (Laptop + Tablet + Mobile)
-----------------------------------------------------------*/
-
-/* 💻 Laptop (1025px – 1366px) */
+/* Laptop (1025px – 1366px) */
 @media (min-width: 1025px) and (max-width: 1366px) {
   .about-hero-content h1 {
     font-size: 3rem;
@@ -607,59 +517,40 @@
   }
 }
 
-/* 📱 Tablet (601px – 1024px) */
+/* Tablet (601px – 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
-
   .about-hero {
     height: 55vh;
   }
-
   .about-hero-content h1 {
     font-size: 2.5rem;
   }
-
   .atm-container {
     gap: 20px;
   }
-
-  .atm-card {
-    width: 260px;
-  }
-
+  .atm-card,
   .mission-box {
     width: 260px;
   }
 }
 
-/* 📱 Mobile (max-width: 600px) */
+/* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
-
   .about-hero {
     height: 45vh;
   }
-
   .about-hero-content h1 {
     font-size: 2rem;
   }
-
   .about-hero-content p {
     font-size: 1rem;
   }
-
   .about-section {
     padding: 40px 6%;
   }
-
-  .atm-card {
-    width: 90%;
-  }
-
-  .mission-box {
-    width: 90%;
-  }
-
+  .atm-card,
+  .mission-box,
   .team-card {
     width: 90%;
   }
-
 }

@@ -268,18 +268,25 @@ body {
             font-weight: bold;
         }
 
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            color: black;
-            font-size: 1em;
-            font-family: 'Georgia', serif;
-            transition: all 0.3s;
-        }
+       .form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+    color: black;
+    font-size: 1em;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s;
+}
+
+/* Fix placeholder color */
+.form-group input::placeholder,
+.form-group select::placeholder {
+    color: black;
+}
+
 
         .form-group input:focus,
         .form-group select:focus {
@@ -289,9 +296,9 @@ body {
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
         }
 
-        .form-group input::placeholder {
+        /* .form-group input::placeholder {
             color: rgba(245, 245, 245, 0.5);
-        }
+        } */
 
         .form-row {
             display: grid;

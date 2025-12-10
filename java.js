@@ -76,7 +76,53 @@ let currentSlide = 0;
             
             closeBookingForm();
             document.getElementById('bookingForm').reset();
+        
         }
+
+        // ======================
+// MOBILE MENU
+// ======================
+
+function toggleMenu(){
+    let links = document.querySelector(".nav-links");
+    links.classList.toggle("active");
+}
+
+
+// ======================
+// BOOKING MODAL
+// ======================
+
+function openBookingForm(type){
+    document.getElementById("eventType").value = type;
+    document.getElementById("bookingModal").style.display = "block";
+}
+
+function closeBookingForm(){
+    document.getElementById("bookingModal").style.display = "none";
+}
+
+// close when clicking outside
+window.onclick = function(e){
+    let modal = document.getElementById("bookingModal");
+    if(e.target == modal){
+        modal.style.display = "none";
+    }
+}
+
+
+// ======================
+// FORM SUBMIT
+// ======================
+
+function submitBooking(e){
+    e.preventDefault();
+
+    alert("Booking Request Sent Successfully ✅");
+
+    closeBookingForm();
+}
+
 // bradn
 
    const brands = [
