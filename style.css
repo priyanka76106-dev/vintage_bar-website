@@ -265,45 +265,47 @@ body {
 /* ===== SECTIONS ===== */
 .section-title {
     text-align: center;
-    font-size: clamp(24px, 5vw, 36px);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 2rem;
     color: #d4a373;
-    margin: 50px 5% 20px;
-    font-family: Georgia, serif;
-    letter-spacing: 1px;
-    padding-right: 160px;
 }
+
+@media(max-width:600px){
+
+    .section-title {
+        font-size: 1.6rem;   /* reduces size nicely */
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
 
 /* ===== BAR FEATURES ===== */
 .bar-features-section {
     background: #0d0d0d;
-    /* padding: 70px 5%; */
     width: 100%;
-    padding-left: 250px;
-    
+    padding: 50px 5%;
 }
 
+/* GRID */
 .features-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+    gap: 30px;
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: 130px;
+    margin: auto;
 }
 
+/* BOX */
 .feature-box {
     background: #1a1a1a;
-    padding: 35px 25px;
+    padding: 30px 20px;
     border-radius: 12px;
     text-align: center;
-    transition: 0.3s ease-in-out;
-    border: 1px solid rgba(212, 163, 115, 0.3);
-    /* margin-left: 30px; */
-    /* padding: 40px; */
-    margin-right: 50px;
+    transition: .3s;
+    border: 1px solid rgba(212,163,115,.3);
 }
-
 
 .feature-box:hover {
     transform: translateY(-10px);
@@ -313,21 +315,37 @@ body {
 
 .feature-box i {
     font-size: 45px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .feature-box h3 {
     color: #d4a373;
-    margin-bottom: 10px;
     font-size: 22px;
-    font-family: Georgia, serif;
 }
 
 .feature-box p {
     color: #ddd;
     font-size: 16px;
-    line-height: 1.6;
 }
+
+
+/* ✅ MOBILE FIX */
+@media(max-width:600px){
+
+    .bar-features-section {
+        padding: 40px 20px;
+    }
+
+    .features-container {
+        gap: 20px;
+    }
+
+    .feature-box {
+        margin: 0;      /* <-- removes gaps */
+        padding: 25px;
+    }
+}
+
 
 /* ===== AMBIENCE SECTION ===== */
 .ambience-section {
